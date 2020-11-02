@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<script>
+let a = ["a","b"];
+let maxLength=2;
+
+let rec= (array,i,k,arrLength)=>{
+
+   if(i==arrLength-1)
+   {
+       array.forEach((n)=>{
+           document.write(n+k+" ");
+       })
+   } 
+   else 
+
+       for(let j=0;j<array.length;j++){
+          let m = k + a[j];
+           rec(array,i+1,m,arrLength);
+       }
+  
+}
+
+for(let i=0;i<maxLength;i++){
+    rec(a,i,"",maxLength)
+}
+
+</script>

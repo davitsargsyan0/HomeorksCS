@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<script>
+	let arr = [[1,1,1],
+                [2,2,2],
+                [5,4,6] ];
+             
+function change1(a){
+	for(let i=0;i<a.length;i++)
+    for(let k=0;k<a[0].length;k++)
+        for(let j=1;j<a[0].length;j++)
+            if(a[i][j]<a[i][j-1])
+            {
+                c=a[i][j]
+                a[i][j]=a[i][j-1]
+                a[i][j-1]=c
+            }
+}
+function changeArr2(a){
+		change1(a);
+	for(let k=0;k<a.length;k++)
+    for(let j=1;j<a.length;j++)
+        if(a[j]>a[j-1])
+        {
+            c=a[j]
+            a[j]=a[j-1]
+            a[j-1]=c
+        }
+        }
+changeArr2(arr);
+console.log(arr);
+</script>
